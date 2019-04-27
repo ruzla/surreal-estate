@@ -15,27 +15,25 @@ body {
         padding-right: 50px;
         span {
             padding-left: 20px;
+            padding-right: 40px;
         }
     }
     .nav {
         display:inline-block;
         margin:0;
         padding:0;
-        padding-left: 40px;
+        padding-left: 0;
 
     }
     .item {
         display: inline-block;
-    
-      button {
+        text-decoration: none;
         margin: 0;
         padding: 10px;
         color: grey;
         background-color: white;
+        font-family:  'Nunito', sans-serif;
+        font-size: 14px;
         &:hover { color:white; background:grey;}
-         border: none;
-         font-family:  'Nunito', sans-serif;
-         font-size: 14px;
-      }
-   }
+    }
 }
