@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBar from './navbar';
 import '../styles/app.scss';
 
-const App = () => (
-
-  <div>Hello World!</div>
-);
+class App extends React.Component {
+  render() {
+    return (
+        <NavBar />
+    );
+  }
+}
 
 export default App;
