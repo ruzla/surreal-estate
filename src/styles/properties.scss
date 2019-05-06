@@ -1,0 +1,41 @@
+.properties{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  .col{
+    background-color:white;
+    margin: 22px;
+    padding: 15px;
+    font-size: 20px;
+    .title{
+        font-size: 25px;
+    }
+    .propertyCardIcon{
+        text-align: center;
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: lightgrey;
+    }
+    #bedIcon{
+        padding-right: 10px;
+    }
+    #bathIcon{
+        padding-right: 14px;
+    }
+    #poundIcon{
+        padding-right: 5px;
+    }
+    .email{
+      text-align: center;
+      background-color: purple;
+        a{
+        display: block;
+        text-decoration:none;
+        width: 100%;
+        color: white;
+        }
+    }
+    
+  }
+}
