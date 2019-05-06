@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alert from '../components/alert';
 import axios from 'axios';
 
 class AddProperty extends Component {
@@ -12,11 +13,29 @@ class AddProperty extends Component {
       city: 'Manchester',
       email: '',
     },
+    alertMessage: '',
+    isSuccess: false,
+    isError: false,
   };
 
   handleAddProperty = event => {
     event.preventDefault();
-    axios.post('http://localhost:3000/api/v1/PropertyListing', this.state.fields);
+    this.setState({
+      alertMessage: '',
+      isSuccess: false,
+      isError: false,
+    });
+    axios.post('http://localhost:3000/api/v1/PropertyListing', this.state.fields)
+      .then(() => this.setState({
+        isSuccess: true,
+        alertMessage: 'Property Added.',
+      }))
+      .catch(() => {
+        this.setState({
+          alertMessage: 'Server error. Please try again later.',
+          isError: true,
+        });
+      });
     console.log(this.state.fields);
   };
 
@@ -32,6 +51,8 @@ class AddProperty extends Component {
   render() {
     return (
       <div className="AddProperty">
+        {this.state.isSuccess && <Alert message={this.state.alertMessage} success />}
+        {this.state.isError && <Alert message={this.state.alertMessage} />}
         <form onSubmit={this.handleAddProperty}>
           <label htmlFor="title">Property Title</label>
           <input id="title" name="title" type="text" value={this.state.fields.title} onChange={this.handleFieldChange} placeholder="Enter Property Title Here...." />
@@ -78,7 +99,7 @@ class AddProperty extends Component {
 
           <label htmlFor="emailAddress">Email</label>
           <input id="emailAddress" name="email" type="email" value={this.state.fields.email} onChange={this.handleFieldChange} placeholder="Enter Email Address Here...." />
-          
+
           <button id="nameSubmitButton" type="submit">Add</button>
         </form>
       </div>
