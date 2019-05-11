@@ -14,7 +14,7 @@ const PropertyCard = props => (
     <div className="bathrooms"><FontAwesomeIcon id="bathIcon" icon="bath" />{props.bathrooms}</div>
     <div className="price"><FontAwesomeIcon id="poundIcon"icon="pound-sign" />{props.price}</div>
     <div className="email">
-      <a href={`"mailto:"${props.email}`} target="_top"><FontAwesomeIcon icon="envelope" />Email</a>
+      <a href={`"mailto:"${props.email}`}><FontAwesomeIcon icon="envelope" />Email</a>
     </div>
   </div>
 );
