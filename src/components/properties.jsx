@@ -2,6 +2,7 @@ import React from 'react';
 import PropertyCard from './propertycard';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import qs from 'qs';
 
 class Properties extends React.Component {
   constructor(props) {
@@ -33,15 +34,28 @@ class Properties extends React.Component {
     }
   }
 
+  buildQueryString = (operation, valueObj) => {
+    const { location: { search } } = this.props;
+    const currentQueryParams = qs.parse(search, { ignoreQueryPrefix: true });
+    const newQueryParams = {
+      ...currentQueryParams,
+      [operation]: JSON.stringify(valueObj),
+    };
+    return qs.stringify(newQueryParams, { addQueryPrefix: true, encode: false });
+  };
+
   render() {
     return (
       <div className="properties">
         <div className="sideNav">
           <span className="filterTitle">Filter By Location:</span>
-          <Link className="filterLink" to={'/?query={"city": "Manchester"}'}>Manchester</Link>
-          <Link className="filterLink" to={'/?query={"city": "Leeds"}'}>Leeds</Link>
-          <Link className="filterLink" to={'/?query={"city": "Sheffield"}'}>Sheffield</Link>
-          <Link className="filterLink" to={'/?query={"city": "Liverpool"}'}>Liverpool</Link>
+          <Link className="filterLink" to={this.buildQueryString('query', { city: 'Manchester' })}>Manchester</Link>
+          <Link className="filterLink" to={this.buildQueryString('query', { city: 'Leeds' })}>Leeds</Link>
+          <Link className="filterLink" to={this.buildQueryString('query', { city: 'Sheffield' })}>Sheffield</Link>
+          <Link className="filterLink" to={this.buildQueryString('query', { city: 'Liverpool' })}>Liverpool</Link>
+          <span className="filterTitle">Filter By Price:</span>
+          <Link className="filterLink" to={this.buildQueryString('sort', { price: -1 })}>Price Descending</Link>
+          <Link className="filterLink" to={this.buildQueryString('sort', { price: +1 })}>Price Ascending</Link>
         </div>
         <div className="col-div">
           {this.state.properties.map(property => (
