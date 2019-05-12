@@ -3,11 +3,17 @@ import PropertyCard from './propertycard';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import qs from 'qs';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(faSearch);
 
 class Properties extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      search: '',
       properties: [],
       alertMessage: '',
       error: false,
@@ -39,15 +45,36 @@ class Properties extends React.Component {
     const currentQueryParams = qs.parse(search, { ignoreQueryPrefix: true });
     const newQueryParams = {
       ...currentQueryParams,
-      [operation]: JSON.stringify(valueObj),
+      [operation]: JSON.stringify({
+        ...JSON.parse(currentQueryParams[operation] || '{}'),
+        ...valueObj,
+      }),
     };
     return qs.stringify(newQueryParams, { addQueryPrefix: true, encode: false });
+  };
+
+  handleSearch = event => {
+    event.preventDefault();
+    const { search } = this.state;
+    const newQueryString = this.buildQueryString('query', { title: { $regex: search } });
+    const { history } = this.props;
+    history.push(newQueryString);
   };
 
   render() {
     return (
       <div className="properties">
         <div className="sideNav">
+          <form className="searchForm" onSubmit={this.handleSearch}>
+            <input
+              placeHolder="Search..."
+              className="searchBar"
+              type="text"
+              value={this.state.search}
+              onChange={event => this.setState({ search: event.target.value })}
+            />
+            <button className="searchButton" type="submit"><FontAwesomeIcon icon="search" /></button>
+          </form>
           <span className="filterTitle">Filter By Location:</span>
           <Link className="filterLink" to={this.buildQueryString('query', { city: 'Manchester' })}>Manchester</Link>
           <Link className="filterLink" to={this.buildQueryString('query', { city: 'Leeds' })}>Leeds</Link>

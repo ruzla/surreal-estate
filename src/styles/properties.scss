@@ -10,6 +10,30 @@
     height: 100%;
     width: 15%;
     padding-left: 10px;
+    .searchForm {
+      border: 1px solid purple;
+      width: 107%;
+    .searchBar {
+        padding: 6px;
+        padding-right: 37px;
+        //margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        
+    }
+      .searchButton {
+        //margin-top: 8px;
+        float: right;
+        padding: 6px 10px;
+        background: #ddd;
+        font-size: 17px;
+        color:white;
+        border: none;
+        cursor: pointer;
+        &:hover { color:white; background:purple;}
+      }
+    } 
+    }
     .filterTitle {
       font-size: 1.5em;
       background-color: white;
@@ -27,7 +51,7 @@
         font-size: 1.125em;
         &:hover { color:white; background:purple;}
     }
-  }
+  
   .col-div {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -71,5 +95,3 @@
     
   }
 }
-
-
