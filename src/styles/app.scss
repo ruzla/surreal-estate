@@ -27,14 +27,37 @@ body {
 
     }
     .item {
+        //height: 40px;
         display: inline-block;
         text-decoration: none;
         margin: 0;
-        padding: 10px;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
         color: grey;
         background-color: white;
         font-family:  'Nunito', sans-serif;
         font-size: 20px;
         &:hover { color:white; background:grey;}
+    }
+    .login {
+        float: right;
+    }
+
+    .login > button {
+        font-family: Helvetica,sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+         color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: calc(.27548vw + 12.71074px);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background-color .3s,border-color .3s;
+        background-color: #4c69ba;
+        border: calc(.06887vw + .67769px) solid #4c69ba;
+        padding: calc(.34435vw + 13.38843px) calc(.34435vw + 18.38843px);
     }
 }

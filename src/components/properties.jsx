@@ -67,7 +67,7 @@ class Properties extends React.Component {
         <div className="sideNav">
           <form className="searchForm" onSubmit={this.handleSearch}>
             <input
-              placeHolder="Search..."
+              placeholder="Search..."
               className="searchBar"
               type="text"
               value={this.state.search}
