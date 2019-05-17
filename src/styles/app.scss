@@ -6,17 +6,21 @@ body {
     .navBar {
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: purple;
         border-bottom: 1px solid grey;
     }
     .textLogo {
         display: inline-block;
         font-size: 40px;
         padding-left: 50px;
-        padding-right: 50px;
+        width: 100%;
+        color: white;
         span {
             padding-left: 20px;
-            padding-right: 40px;
+        }
+        #title {
+            color: white;
+            padding-right: 15px;
         }
     }
     .nav {
@@ -24,40 +28,73 @@ body {
         margin:0;
         padding:0;
         padding-left: 0;
+        width:77%;
 
     }
     .item {
         //height: 40px;
+        margin-top: 6px;
         display: inline-block;
         text-decoration: none;
-        margin: 0;
+        //margin: 0;
         padding-top: 17px;
         padding-bottom: 18px;
         padding-left: 10px;
         padding-right: 10px;
         color: grey;
-        background-color: white;
+        background-color: purple;
         font-family:  'Nunito', sans-serif;
         font-size: 20px;
         &:hover { color:white; background:grey;}
     }
     .login {
         float: right;
+        background-color: purple;
     }
 
     .login > button {
-        font-family: Helvetica,sans-serif;
-        font-weight: 700;
-        -webkit-font-smoothing: antialiased;
-         color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        font-size: calc(.27548vw + 12.71074px);
+        margin-top: 6px;
+        float: right;
         text-decoration: none;
-        text-transform: uppercase;
-        transition: background-color .3s,border-color .3s;
-        background-color: #4c69ba;
-        border: calc(.06887vw + .67769px) solid #4c69ba;
-        padding: calc(.34435vw + 13.38843px) calc(.34435vw + 18.38843px);
+        //margin: 0;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+        background-color: purple;
+        font-family:  'Nunito', sans-serif;
+        font-size: 20px;
+        border: none;
+        &:hover { color:white; background:grey;}
+        // font-family: Helvetica,sans-serif;
+        // font-weight: 700;
+        // -webkit-font-smoothing: antialiased;
+        //  color: #fff;
+        // cursor: pointer;
+        // display: inline-block;
+        // font-size: calc(.27548vw + 12.71074px);
+        // text-decoration: none;
+        // text-transform: uppercase;
+        // transition: background-color .3s,border-color .3s;
+        // background-color: #4c69ba;
+        // border: calc(.06887vw + .67769px) solid #4c69ba;
+        // padding: calc(.34435vw + 13.38843px) calc(.34435vw + 18.38843px);
     }
+}
+button.kep-login-facebook.metro {
+        float: right;
+        margin-top: 6px;
+        text-decoration: none;
+        //margin: 0;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+        background-color: purple;
+        font-family:  'Nunito', sans-serif;
+        font-size: 20px;
+        border: none;
+        &:hover { color:white; background:grey;}
 }
