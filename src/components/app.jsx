@@ -33,7 +33,11 @@ render() {
         logOut={this.handleLogout}
       />
       <Switch>
-        <Route exact path="/" component={Properties} />
+        <Route
+          exact
+          path="/"
+          render={props => <Properties {...props} userId={this.state.userId} />}
+        />
         <Route exact path="/add-property" component={AddProperty} />
       </Switch>
     </React.Fragment>

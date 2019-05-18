@@ -10,14 +10,14 @@ library.add(faHome);
 const NavBar = (props) => (
   <div className="navBar">
     <div className="textLogo">
-      <FontAwesomeIcon icon="home" /><span>Surreal Estate</span>
+      <FontAwesomeIcon icon="home" /><span id="title">Surreal Estate</span>
       <ul className="nav">
         <Link className="item" to="/">View Properties</Link>
         <Link className="item" to="/add-property">Add Property</Link>
         <div className="login">
           {props.userId ? (<button onClick={props.logOut}>Logout</button>) :
             (<FacebookLogin
-              appId={714496712301081}
+              appId="714496712301081"
               autoLoad
               callback={props.onLogin}
             />

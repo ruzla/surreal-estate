@@ -61,6 +61,15 @@ class Properties extends React.Component {
     history.push(newQueryString);
   };
 
+  handleSaveProperties = (propertyId) => {
+    const { userId } = this.props;
+
+    axios.post('http://localhost:3000/api/v1/Favourite', {
+      propertyListing: propertyId,
+      fbUserId: userId,
+    });
+  };
+
   render() {
     return (
       <div className="properties">
@@ -87,7 +96,7 @@ class Properties extends React.Component {
         <div className="col-div">
           {this.state.properties.map(property => (
             <div key={property._id} className="col">
-              <PropertyCard {...property} />
+              <PropertyCard userId={this.props.userId} {...property} onSaveProperty={this.handleSaveProperties} />
             </div>
           ))}
         </div>

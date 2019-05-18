@@ -80,11 +80,27 @@
     #poundIcon{
         padding-right: 5px;
     }
-    .email{
+    .email {
       text-align: center;
       background-color: purple;
       padding-top: 10px;
       padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+        a{
+        display: block;
+        text-decoration:none;
+        width: 100%;
+        color: white;
+        }
+    }
+    .save {
+      text-align: center;
+      background-color: purple;
+      padding-top: 5px;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      cursor: copy;
         a{
         display: block;
         text-decoration:none;
