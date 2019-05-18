@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './navbar';
+import Favourites from './favourites';
 import '../styles/app.scss';
 import '../styles/AddProperty.scss';
 import '../styles/properties.scss';
@@ -37,6 +38,11 @@ render() {
           exact
           path="/"
           render={props => <Properties {...props} userId={this.state.userId} />}
+        />
+        <Route
+          exact
+          path="/saved-properties"
+          render={props => <Favourites {...props} userId={this.state.userId} />}
         />
         <Route exact path="/add-property" component={AddProperty} />
       </Switch>

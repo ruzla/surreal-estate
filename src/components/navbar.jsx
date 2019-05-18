@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,12 @@ const NavBar = (props) => (
         <Link className="item" to="/">View Properties</Link>
         <Link className="item" to="/add-property">Add Property</Link>
         <div className="login">
-          {props.userId ? (<button onClick={props.logOut}>Logout</button>) :
+          {props.userId ? (
+            <Fragment>
+              <button onClick={props.logOut}>Logout</button>
+              <Link className="item" to="saved-properties">Saved Properties</Link>
+            </Fragment>
+          ) :
             (<FacebookLogin
               appId="714496712301081"
               autoLoad

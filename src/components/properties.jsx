@@ -15,6 +15,7 @@ class Properties extends React.Component {
     this.state = {
       search: '',
       properties: [],
+      favorites: [],
       alertMessage: '',
       error: false,
     };
