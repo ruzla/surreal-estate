@@ -1,13 +1,13 @@
 # Surreal Estate :house_with_garden:
 
-# :warning:***Currently In Developement On Dev Branch***:warning:
+#£ :warning:***Currently In Developement On Dev Branch***:warning:
 
 ## Getting Started
 
 ### Clone down this repository:
 
 ```bash
-git clone git@github.com:MCRcodes/react-bootstrap.git <your_project_name>
+git@github.com:ruzla/surreal-estate.git
 ```
 
 ### Install dependencies
