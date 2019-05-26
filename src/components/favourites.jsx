@@ -34,7 +34,7 @@ class Favourites extends React.Component {
         {
           this.state.favourites.map(favourite => {
             return (
-              <div key={favourite._id}>
+              <div className="favourite-row" key={favourite._id}>
                 <span className="fav">{favourite.propertyListing.title}</span>
                 <button
                   onClick={() => this.handleDeleteProperties(favourite._id)}

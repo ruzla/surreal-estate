@@ -103,6 +103,7 @@ class Properties extends React.Component {
                   userId={this.props.userId}
                   {...property}
                   onSaveProperty={this.handleSaveProperties}
+                  onDeleteproperty={this.handleDeleteProperties}
                 />
               </div>
             ))}
