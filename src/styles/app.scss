@@ -1,0 +1,110 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: lightgrey;
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        background-color: purple;
+        border-bottom: 1px solid grey;
+    }
+    .textLogo {
+        display: inline-block;
+        font-size: 40px;
+        padding-left: 50px;
+        width: 100%;
+        color: white;
+        span {
+            padding-left: 20px;
+        }
+        #title {
+            color: white;
+            padding-right: 15px;
+        }
+    }
+    .nav {
+        display:inline-block;
+        margin:0;
+        padding:0;
+        padding-left: 0;
+        width:77%;
+
+    }
+    .item {
+        margin-top: 6px;
+        display: inline-block;
+        text-decoration: none;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+        background-color: purple;
+        font-family:  'Nunito', sans-serif;
+        font-size: 20px;
+        &:hover { color:white; background:grey;}
+    }
+    .login {
+        float: right;
+        background-color: purple;
+    }
+
+    .login > button {
+        margin-top: 6px;
+        float: right;
+        text-decoration: none;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+        background-color: purple;
+        font-family:  'Nunito', sans-serif;
+        font-size: 20px;
+        border: none;
+        &:hover { color:white; background:grey;}
+    }
+}
+button.kep-login-facebook.metro {
+        float: right;
+        margin-top: 6px;
+        text-decoration: none;
+        padding-top: 17px;
+        padding-bottom: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+        background-color: purple;
+        font-family:  'Nunito', sans-serif;
+        font-size: 20px;
+        border: none;
+        &:hover { color:white; background:grey;}
+}
+.favourites {
+    font-size: 1.5em;
+    margin: 5px;
+    .favourite-row {
+        display: flex;
+        flex-direction: row;
+        .fav {
+          background-color: white;
+          margin: 10px;
+          margin-right: 0px;
+          padding: 20px;
+          width: 100%;
+        }
+        .delete {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          text-decoration: none;  
+          color: white;
+          background-color: red;
+          font-family:  'Nunito', sans-serif;
+          font-size: 20px;
+          border: none;
+          &:hover { color:red; background:white;}
+    }
+}
+}

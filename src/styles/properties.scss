@@ -1,0 +1,109 @@
+.properties{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .sideNav {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    padding-right: 20px;
+    background-color: white;
+    .searchForm {
+      border: 1px solid purple;
+      width: 107%;
+    .searchBar {
+        padding: 6px;
+        padding-right: 37px;
+        font-size: 17px;
+        border: none;
+        
+    }
+      .searchButton {
+        float: right;
+        padding: 6px 10px;
+        background: #ddd;
+        font-size: 17px;
+        color:white;
+        border: none;
+        cursor: pointer;
+        &:hover { color:white; background:purple;}
+      }
+    } 
+    }
+    .filterTitle {
+      font-size: 1.5em;
+      background-color: white;
+      width: 100%;
+      padding: 10px;
+    }
+    .filterLink {
+        width: 100%;
+        text-decoration: none;
+        margin: 0;
+        padding: 10px;
+        color: grey;
+        background-color: white;
+        font-family:  'Nunito', sans-serif;
+        font-size: 1.125em;
+        &:hover { color:white; background:purple;}
+    }
+  
+  .col-div {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    width: 85%;
+  }
+  .col{
+    background-color:white;
+    margin: 10px;
+    padding: 15px;
+    font-size: 20px;
+    // width: 50%;
+    .title{
+        font-size: 25px;
+    }
+    .propertyCardIcon{
+        text-align: center;
+        font-size: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: lightgrey;
+    }
+    #bedIcon{
+        padding-right: 10px;
+    }
+    #bathIcon{
+        padding-right: 14px;
+    }
+    #poundIcon{
+        padding-right: 5px;
+    }
+    .email {
+      text-align: center;
+      background-color: purple;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+        a{
+        display: block;
+        text-decoration:none;
+        width: 100%;
+        color: white;
+        }
+    }
+    .save {
+      text-align: center;
+      background-color: purple;
+      padding-top: 5px;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+      cursor: copy;
+      display: block;
+      text-decoration:none;
+      width: 100%;
+      color: white;
+    }
+    
+  }
+}
